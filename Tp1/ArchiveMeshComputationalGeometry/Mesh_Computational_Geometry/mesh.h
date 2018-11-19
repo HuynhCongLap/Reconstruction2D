@@ -443,28 +443,57 @@ public:
 
             float dot = (abx * cbx + aby * cby); // dot product
             float cross = (abx * cby - aby * cbx); // cross product
-
             float alpha = atan2(cross, dot);
 
             return alpha;
+    }
+
+    Vertex Circumcenter(int f_ti)
+    {
+        /*Step 1: determine 3 vertices of face f_ti*/
+        Vertex V1 = _vertexArray[_facesArray[f_ti].getVertex(0)];
+        Vertex V2 = _vertexArray[_facesArray[f_ti].getVertex(1)];
+        Vertex V3 = _vertexArray[_facesArray[f_ti].getVertex(2)];
+        /*Step 2: circumcentre of face f_ti*/
+        float tan1= tan(AngleBetweenThreePoints(V3,V1,V2));      /*tan v1*/
+        float tan2= tan(AngleBetweenThreePoints(V1,V2,V3));      /*tan v2*/
+        float tan3= tan(AngleBetweenThreePoints(V2,V3,V1));      /*tan v3*/
+        float alpha = (tan2+tan3)/(2*(tan1+tan2+tan3));
+        float beta = (tan3+tan1)/(2*(tan1+tan2+tan3));
+        float gama = (tan1+tan2)/(2*(tan1+tan2+tan3));
+        float x = V1.x()*alpha+V2.x()*beta+V3.x()*gama;
+        float y = V1.y()*alpha+V2.y()*beta+V3.y()*gama;
+        float z = V1.z()*alpha+V2.z()*beta+V3.z()*gama;
+        Vertex H = Vertex(x,y,0);
+        return H;
     }
 
     void Angle(){
 
         _baryCenter.resize(0);
         for(int i=0; i<_facesArray.size(); i++){
-            Vertex A = _vertexArray[_facesArray[i].getVertex(0)];
-            Vertex B = _vertexArray[_facesArray[i].getVertex(1)];
-            Vertex C = _vertexArray[_facesArray[i].getVertex(2)];
-            float tanA = tan(AngleBetweenThreePoints(C,A,B));
-            float tanB = tan(AngleBetweenThreePoints(A,B,C));
-            float tanC = tan(AngleBetweenThreePoints(B,C,A));
 
-             Vertex H(tanB + tanC, tanC + tanA, 0);
-            _baryCenter.push_back(H);
+            _baryCenter.push_back( Circumcenter(i));
         }
-        cout<<_baryCenter.size();
+
+    }
+
+    void debug()
+    {
+        cout<<"So tam giac: "<<_facesArray.size()<<endl;
+        for(int i=0; i<_facesArray.size(); i++){
+            cout<<"Tam giac ["<<i<<"]"<<endl;
+            cout<<"Cac dinh: "<< _facesArray[i].getVertex(0) <<"*"<< _facesArray[i].getVertex(1) << "*" << _facesArray[i].getVertex(2) <<endl;
+            cout<<"Cac hang xom "<< _facesArray[i].getVoisin(0) <<"*"<< _facesArray[i].getVoisin(1) << "*" << _facesArray[i].getVoisin(2) <<endl;
+            cout<<endl;
+        }
+        cout<<"Cac canh bien: "<<endl;
+        for(int i=0 ; i<_borderEgde.size() ; i++)
+        {
+            cout<<"Canh "<<i<<": "<<_borderEgde[i].one()<<"*"<<_borderEgde[i].two()<<endl;
+
+        }
     }
 };
 
-#endif // MESH_H
+#endif // MESH_H`

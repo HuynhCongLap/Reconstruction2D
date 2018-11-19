@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.5.2, 2018-11-19T17:41:56. -->
+<!-- Written by QtCreator 4.5.2, 2018-11-19T07:30:42. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
-  <value type="QByteArray">{67942e14-ee69-4f9e-b2ac-fe59b4e15a34}</value>
+  <value type="QByteArray">{2f8dc544-0392-4caf-a9ff-8dfd2fe94c3a}</value>
  </data>
  <data>
   <variable>ProjectExplorer.Project.ActiveTarget</variable>
@@ -61,12 +61,12 @@
   <valuemap type="QVariantMap">
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Desktop</value>
    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Desktop</value>
-   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{d89ea70b-f8ba-4028-8b14-af13a0079a91}</value>
+   <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">{ca7235b4-2ad7-46a2-bf05-f2b7e6af3eee}</value>
    <value type="int" key="ProjectExplorer.Target.ActiveBuildConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveDeployConfiguration">0</value>
    <value type="int" key="ProjectExplorer.Target.ActiveRunConfiguration">0</value>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.0">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/LastTP/Reconstruction2D/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Debug</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/Chaine/MeshTriangulation/UE-INF2316M_Depot_archive_1452019/HUYNH Cong Lap - 1452019/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Debug</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -126,7 +126,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.1">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/LastTP/Reconstruction2D/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Release</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/Chaine/MeshTriangulation/UE-INF2316M_Depot_archive_1452019/HUYNH Cong Lap - 1452019/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Release</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -186,7 +186,7 @@
     <value type="bool" key="Qt4ProjectManager.Qt4BuildConfiguration.UseShadowBuild">true</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.BuildConfiguration.2">
-    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/LastTP/Reconstruction2D/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Profile</value>
+    <value type="QString" key="ProjectExplorer.BuildConfiguration.BuildDirectory">/home/pin/Desktop/Chaine/MeshTriangulation/UE-INF2316M_Depot_archive_1452019/HUYNH Cong Lap - 1452019/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Profile</value>
     <valuemap type="QVariantMap" key="ProjectExplorer.BuildConfiguration.BuildStepList.0">
      <valuemap type="QVariantMap" key="ProjectExplorer.BuildStepList.Step.0">
       <value type="bool" key="ProjectExplorer.BuildStep.Enabled">true</value>
@@ -304,13 +304,13 @@
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">Mesh_Computational_Geometry</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/pin/Desktop/LastTP/Reconstruction2D/Tp1/ArchiveMeshComputationalGeometry/Mesh_Computational_Geometry/Mesh_Computational_Geometry.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/pin/Desktop/Chaine/MeshTriangulation/UE-INF2316M_Depot_archive_1452019/HUYNH Cong Lap - 1452019/Tp1/ArchiveMeshComputationalGeometry/Mesh_Computational_Geometry/Mesh_Computational_Geometry.pro</value>
     <value type="bool" key="QmakeProjectManager.QmakeRunConfiguration.UseLibrarySearchPath">true</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.CommandLineArguments"></value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">Mesh_Computational_Geometry.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
-    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">/home/pin/Desktop/LastTP/Reconstruction2D/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Debug</value>
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">/home/pin/Desktop/Chaine/MeshTriangulation/UE-INF2316M_Depot_archive_1452019/HUYNH Cong Lap - 1452019/Tp1/ArchiveMeshComputationalGeometry/build-Mesh_Computational_Geometry-Desktop-Debug</value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>

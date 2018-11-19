@@ -229,8 +229,9 @@ void Mesh::insertPointOutSide(Vertex vt)
 
                 Triangle new_one(_vertexArray.size()-1,head.two(),head.one(),head.face(),-1,-1);
                 _facesArray.push_back(new_one);
+
                 int index_last = _facesArray[head.face()].getLast(head.one(), head.two());
-               // _facesArray[head.face()].changeVoisin(index_last,_facesArray.size()-1,0);
+                _facesArray[head.face()].changeVoisin(index_last,_facesArray.size()-1,0);
 
                 if(queue.isEmpty())
                 {
@@ -239,14 +240,21 @@ void Mesh::insertPointOutSide(Vertex vt)
                 }
                 else{
                   bool dup = false;
+
                   for(int j =0; j<queue.size(); j++)
                   {
                       //  cout<<"Canh 5:" << one.one() <<" Canh 2: " << one.two();
                       if(queue[j].duplicate(one))
                       {
 
-                        _facesArray[queue[j].face()].changeVoisin(one);
-                        _facesArray[one.face()].changeVoisin(queue[j]);
+                         int index_last = _facesArray[queue[j].face()].getLast(queue[j].one(), queue[j].two());
+                        _facesArray[queue[j].face()].changeVoisin(index_last,one.face(),0);
+
+                             index_last = _facesArray[one.face()].getLast(one.one(), one.two());
+                       _facesArray[one.face()].changeVoisin(index_last,queue[j].face(),0);
+
+                        //_facesArray[queue[j].face()].changeVoisin(one);
+                       // _facesArray[one.face()].changeVoisin(queue[j]);
                         queue.erase(queue.begin()+j);
                         dup = true;
                         break;
@@ -260,8 +268,13 @@ void Mesh::insertPointOutSide(Vertex vt)
                   {
                       if(queue[j].duplicate(two))
                       {
-                          _facesArray[queue[j].face()].changeVoisin(two);
-                          _facesArray[two.face()].changeVoisin(queue[j]);
+                          int index_last = _facesArray[queue[j].face()].getLast(queue[j].one(), queue[j].two());
+                         _facesArray[queue[j].face()].changeVoisin(index_last,two.face(),0);
+
+                              index_last = _facesArray[two.face()].getLast(two.one(), two.two());
+                        _facesArray[two.face()].changeVoisin(index_last,queue[j].face(),0);
+                          //_facesArray[queue[j].face()].changeVoisin(two);
+                          //_facesArray[two.face()].changeVoisin(queue[j]);
                           queue.erase(queue.begin()+j);
                           dup = true;
                           break;

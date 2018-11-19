@@ -29,6 +29,7 @@ void GLDisplayWidget::initializeGL()
     _mesh.boudingBox();
     _mesh_bouding.universe();
     _mesh.Angle();
+    _mesh.debug();
 
 
 }
@@ -58,6 +59,7 @@ void GLDisplayWidget::paintGL(){
     //  _mesh.check_predicate();
       _mesh_bouding.draw_universe();
       _mesh.Angle();
+      _mesh.check_predicate();
 
 
 }
@@ -124,6 +126,7 @@ void GLDisplayWidget::selectPositionAndColorOn3DModel() {
 
         Vertex insert(posClickSelected.x(),posClickSelected.y(),0);
         _mesh.newInsertMesh(insert);
+        _mesh.debug();
         qDebug() << color[0]<< ", " << color[1] << ", "<< color[2]; // Color of face
 
     }
